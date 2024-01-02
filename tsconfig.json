@@ -1,0 +1,11 @@
+{
+	"extends": "@weebat/tsconfig",
+	"compilerOptions": {
+		"outDir": "./dist",
+	},
+  "exclude": [
+    "node_modules",
+    "dist",
+    "example"
+  ]
+}
