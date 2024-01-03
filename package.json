@@ -1,11 +1,12 @@
 {
   "name": "@weebat/axios",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A axios class method.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rimraf ./dist && tsc"
+    "build": "rimraf ./dist && tsc",
+    "release": "pnpm build && npm publish --access public"
   },
   "keywords": ["axios", "abortController", "request"],
   "author": {

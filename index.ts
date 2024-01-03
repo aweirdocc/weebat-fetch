@@ -42,7 +42,7 @@ export class Request {
   instance: AxiosInstance;
   // 拦截器
   interceptors?: HttpInterceptors<AxiosResponse>;
-
+  // 取消请求控制器
   abortControllerMap: Map<string, AbortController>;
 
   constructor(config: CreateAxiosConfig) {
@@ -109,7 +109,7 @@ export class Request {
         await new Promise((resolve) => {
           setTimeout(() => {
             resolve('retried');
-          }, config.retryDelay ?? 50);
+          }, config.retryDelay ?? 5);
         })
         // 发起重连
         return await this.request(config);
